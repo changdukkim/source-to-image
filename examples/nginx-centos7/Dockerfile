@@ -4,15 +4,15 @@
 FROM centos:centos7
 
 # Here you can specify the maintainer for the image that you're building
-LABEL maintainer="Your Name <your.name@example.com>"
+LABEL maintainer="Changduk <chakim@redhat.com>"
 
 # Export an environment variable that provides information about the application version.
 # Replace this with the version for your application.
-ENV NGINX_VERSION=1.6.3
+ENV NGINX_VERSION=latest
 
 # Set the labels that are used for OpenShift to describe the builder image.
 LABEL io.k8s.description="Nginx Webserver" \
-    io.k8s.display-name="Nginx 1.6.3" \
+    io.k8s.display-name="Nginx 1.17" \
     io.openshift.expose-services="8080:http" \
     io.openshift.tags="builder,webserver,html,nginx" \
     # this label tells s2i where to find its mandatory scripts
